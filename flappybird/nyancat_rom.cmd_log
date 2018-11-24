@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj flappybird -o D:/DSL/flappybird/nyancat_rom.tfi -lib work D:/DSL/flappybird//nyancat_12_bit_rom.v -module nyancat_rom -template D:/xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

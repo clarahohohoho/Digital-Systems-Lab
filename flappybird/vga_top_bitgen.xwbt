@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\DSL\flappybird\vga_top.ncd
+OUTFILE=D:\DSL\flappybird\vga_top.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=D:\DSL\flappybird
+LICENSE=WebPack
+USER_INFO=211605112_0_0_572

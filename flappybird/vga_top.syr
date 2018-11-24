@@ -1,0 +1,1818 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: vga_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vga_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vga_top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : vga_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\DSL\flappybird\LFSR.v" into library work
+Parsing module <LFSR>.
+Analyzing Verilog file "D:\DSL\flappybird\Y_ROM.v" into library work
+Parsing module <Y_ROM>.
+Analyzing Verilog file "D:\DSL\flappybird\X_RAM.v" into library work
+Parsing module <X_RAM_NOREAD>.
+WARNING:HDLCompiler:98 - "D:\DSL\flappybird\X_RAM.v" Line 96: shift_Coin was previously declared with a range
+Analyzing Verilog file "D:\DSL\flappybird\VGA_generator.v" into library work
+Parsing module <VGA_generator>.
+Analyzing Verilog file "D:\DSL\flappybird\obstacle_logic.v" into library work
+Parsing module <obstacle_logic>.
+Analyzing Verilog file "D:\DSL\flappybird\ipcore_dir\sprites.v" into library work
+Parsing module <sprites>.
+Analyzing Verilog file "D:\DSL\flappybird\ipcore_dir\pipe.v" into library work
+Parsing module <pipe>.
+Analyzing Verilog file "D:\DSL\flappybird\ipcore_dir\coin.v" into library work
+Parsing module <coin>.
+Analyzing Verilog file "D:\DSL\flappybird\hvsync_generator.v" into library work
+Parsing module <hvsync_generator>.
+Analyzing Verilog file "D:\DSL\flappybird\flight_control.v" into library work
+Parsing module <flight_control>.
+Analyzing Verilog file "D:\DSL\flappybird\coin_logic.v" into library work
+Parsing module <coin_logic>.
+Analyzing Verilog file "D:\DSL\flappybird\Main.v" into library work
+Parsing module <vga_top>.
+WARNING:HDLCompiler:327 - "D:\DSL\flappybird\Main.v" Line 163: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "D:\DSL\flappybird\Main.v" Line 168: Concatenation with unsized literal; will interpret as 32 bits
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:327 - "D:\DSL\flappybird\Main.v" Line 163: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "D:\DSL\flappybird\Main.v" Line 168: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:1016 - "D:\DSL\flappybird\Main.v" Line 426: Port PositiveSpeed is not connected to this instance
+
+Elaborating module <vga_top>.
+
+Elaborating module <BUF>.
+
+Elaborating module <hvsync_generator>.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\hvsync_generator.v" Line 34: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\hvsync_generator.v" Line 44: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\Main.v" Line 199: Result of 10-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\Main.v" Line 200: Result of 10-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\Main.v" Line 201: Result of 9-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <sprites>.
+WARNING:HDLCompiler:1499 - "D:\DSL\flappybird\ipcore_dir\sprites.v" Line 39: Empty module <sprites> remains a black box.
+WARNING:HDLCompiler:189 - "D:\DSL\flappybird\Main.v" Line 203: Size mismatch in connection of port <clka>. Formal port size is 1-bit while actual signal size is 28-bit.
+WARNING:HDLCompiler:1127 - "D:\DSL\flappybird\Main.v" Line 203: Assignment to data_sprites ignored, since the identifier is never used
+
+Elaborating module <pipe>.
+WARNING:HDLCompiler:1499 - "D:\DSL\flappybird\ipcore_dir\pipe.v" Line 39: Empty module <pipe> remains a black box.
+WARNING:HDLCompiler:189 - "D:\DSL\flappybird\Main.v" Line 204: Size mismatch in connection of port <clka>. Formal port size is 1-bit while actual signal size is 28-bit.
+WARNING:HDLCompiler:1127 - "D:\DSL\flappybird\Main.v" Line 204: Assignment to data_pipe ignored, since the identifier is never used
+
+Elaborating module <coin>.
+WARNING:HDLCompiler:1499 - "D:\DSL\flappybird\ipcore_dir\coin.v" Line 39: Empty module <coin> remains a black box.
+WARNING:HDLCompiler:189 - "D:\DSL\flappybird\Main.v" Line 205: Size mismatch in connection of port <clka>. Formal port size is 1-bit while actual signal size is 28-bit.
+WARNING:HDLCompiler:1127 - "D:\DSL\flappybird\Main.v" Line 205: Assignment to data_coins ignored, since the identifier is never used
+
+Elaborating module <VGA_generator>.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\Main.v" Line 266: Result of 8-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <X_RAM_NOREAD>.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 246: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 250: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 254: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 258: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 262: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 271: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 275: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 279: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 283: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\X_RAM.v" Line 287: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:189 - "D:\DSL\flappybird\Main.v" Line 356: Size mismatch in connection of port <shift_Coin>. Formal port size is 1-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:1127 - "D:\DSL\flappybird\Main.v" Line 357: Assignment to q_InitialX ignored, since the identifier is never used
+
+Elaborating module <Y_ROM>.
+WARNING:HDLCompiler:872 - "D:\DSL\flappybird\Y_ROM.v" Line 92: Using initial value of enable since it is never assigned
+
+Elaborating module <LFSR>.
+WARNING:HDLCompiler:189 - "D:\DSL\flappybird\Y_ROM.v" Line 93: Size mismatch in connection of port <clk>. Formal port size is 1-bit while actual signal size is 3-bit.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 181: Signal <C0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 182: Signal <C1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 183: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 184: Signal <C3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 185: Signal <C4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 189: Signal <C1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 190: Signal <C2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 191: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 192: Signal <C4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 193: Signal <C0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 197: Signal <C2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 198: Signal <C3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 199: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 200: Signal <C0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 201: Signal <C1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 205: Signal <C3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 206: Signal <C4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 207: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 208: Signal <C1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 209: Signal <C2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 213: Signal <C4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 214: Signal <C0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 215: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 216: Signal <C2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 217: Signal <C3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 233: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 237: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 241: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 245: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\DSL\flappybird\Y_ROM.v" Line 249: Signal <random> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:634 - "D:\DSL\flappybird\Y_ROM.v" Line 93: Net <BtnR> does not have a driver.
+
+Elaborating module <obstacle_logic>.
+WARNING:HDLCompiler:1127 - "D:\DSL\flappybird\Main.v" Line 399: Assignment to q_Check ignored, since the identifier is never used
+
+Elaborating module <coin_logic>.
+
+Elaborating module <flight_control>.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\flight_control.v" Line 97: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\flight_control.v" Line 98: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\flight_control.v" Line 102: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "D:\DSL\flappybird\flight_control.v" Line 103: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:1127 - "D:\DSL\flappybird\flight_control.v" Line 62: Assignment to j ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\DSL\flappybird\Main.v" Line 428: Assignment to q_InitialF ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "D:\DSL\flappybird\Main.v" Line 194: Net <RGB_in[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <vga_top>.
+    Related source file is "D:\DSL\flappybird\Main.v".
+WARNING:Xst:647 - Input <Sw7> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw6> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sw0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 203: Output port <douta> of the instance <sprite> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 204: Output port <douta> of the instance <pipes> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 205: Output port <douta> of the instance <coins> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 351: Output port <Q_Initial> of the instance <x_ram> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 351: Output port <Q_Count> of the instance <x_ram> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 351: Output port <Q_Stop> of the instance <x_ram> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 399: Output port <Q_Check> of the instance <obs_log> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 426: Output port <PositiveSpeed> of the instance <flight_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 426: Output port <NegativeSpeed> of the instance <flight_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 426: Output port <q_Initial> of the instance <flight_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 426: Output port <q_Flight> of the instance <flight_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\DSL\flappybird\Main.v" line 426: Output port <q_Stop> of the instance <flight_control> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <RGB_in<7:3>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Register <RGB_in<0>> equivalent to <RGB_in<1>> has been removed
+    Found 28-bit register for signal <DIV_CLK>.
+    Found 5-bit register for signal <Show_Coin>.
+    Found 1-bit register for signal <RGB_in<2>>.
+    Found 1-bit register for signal <RGB_in<1>>.
+    Found 1-bit register for signal <Flash_Blue>.
+    Found 28-bit adder for signal <DIV_CLK[27]_GND_1_o_add_0_OUT> created at line 116.
+    Found 9-bit adder for signal <n0287> created at line 201.
+    Found 9-bit adder for signal <n0290> created at line 201.
+    Found 9-bit adder for signal <n0250> created at line 201.
+    Found 11-bit adder for signal <n0269> created at line 225.
+    Found 11-bit adder for signal <n0271> created at line 226.
+    Found 11-bit adder for signal <n0273> created at line 227.
+    Found 11-bit adder for signal <n0275> created at line 228.
+    Found 11-bit adder for signal <n0277> created at line 229.
+    Found 5-bit subtractor for signal <n0226[4:0]> created at line 201.
+    Found 5-bit subtractor for signal <sq_fig_y> created at line 197.
+    Found 16x7-bit Read Only RAM for signal <SSD_CATHODES>
+    Found 1-bit 4-to-1 multiplexer for signal <SSD<3>> created at line 310.
+    Found 1-bit 4-to-1 multiplexer for signal <SSD<2>> created at line 310.
+    Found 1-bit 4-to-1 multiplexer for signal <SSD<1>> created at line 310.
+    Found 1-bit 4-to-1 multiplexer for signal <SSD<0>> created at line 310.
+    Found 10-bit comparator lessequal for signal <n0019> created at line 219
+    Found 10-bit comparator lessequal for signal <n0021> created at line 219
+    Found 10-bit comparator lessequal for signal <n0024> created at line 219
+    Found 10-bit comparator lessequal for signal <n0026> created at line 219
+    Found 10-bit comparator lessequal for signal <n0030> created at line 220
+    Found 10-bit comparator lessequal for signal <n0032> created at line 220
+    Found 10-bit comparator lessequal for signal <n0035> created at line 220
+    Found 10-bit comparator lessequal for signal <n0037> created at line 220
+    Found 10-bit comparator lessequal for signal <n0042> created at line 221
+    Found 10-bit comparator lessequal for signal <n0044> created at line 221
+    Found 10-bit comparator lessequal for signal <n0047> created at line 221
+    Found 10-bit comparator lessequal for signal <n0049> created at line 221
+    Found 10-bit comparator lessequal for signal <n0054> created at line 222
+    Found 10-bit comparator lessequal for signal <n0056> created at line 222
+    Found 10-bit comparator lessequal for signal <n0059> created at line 222
+    Found 10-bit comparator lessequal for signal <n0061> created at line 222
+    Found 10-bit comparator lessequal for signal <n0066> created at line 223
+    Found 10-bit comparator lessequal for signal <n0068> created at line 223
+    Found 10-bit comparator lessequal for signal <n0071> created at line 223
+    Found 10-bit comparator lessequal for signal <n0073> created at line 223
+    Found 10-bit comparator lessequal for signal <n0078> created at line 225
+    Found 10-bit comparator lessequal for signal <n0081> created at line 225
+    Found 10-bit comparator lessequal for signal <n0084> created at line 225
+    Found 11-bit comparator lessequal for signal <n0088> created at line 225
+    Found 10-bit comparator lessequal for signal <n0091> created at line 226
+    Found 10-bit comparator lessequal for signal <n0094> created at line 226
+    Found 10-bit comparator lessequal for signal <n0097> created at line 226
+    Found 11-bit comparator lessequal for signal <n0101> created at line 226
+    Found 10-bit comparator lessequal for signal <n0104> created at line 227
+    Found 10-bit comparator lessequal for signal <n0107> created at line 227
+    Found 10-bit comparator lessequal for signal <n0110> created at line 227
+    Found 11-bit comparator lessequal for signal <n0114> created at line 227
+    Found 10-bit comparator lessequal for signal <n0117> created at line 228
+    Found 10-bit comparator lessequal for signal <n0120> created at line 228
+    Found 10-bit comparator lessequal for signal <n0123> created at line 228
+    Found 11-bit comparator lessequal for signal <n0127> created at line 228
+    Found 10-bit comparator lessequal for signal <n0130> created at line 229
+    Found 10-bit comparator lessequal for signal <n0133> created at line 229
+    Found 10-bit comparator lessequal for signal <n0136> created at line 229
+    Found 11-bit comparator lessequal for signal <n0140> created at line 229
+    Summary:
+	inferred   1 RAM(s).
+	inferred  11 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+	inferred  40 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <vga_top> synthesized.
+
+Synthesizing Unit <hvsync_generator>.
+    Related source file is "D:\DSL\flappybird\hvsync_generator.v".
+    Found 10-bit register for signal <CounterY>.
+    Found 10-bit register for signal <CounterX>.
+    Found 1-bit register for signal <vga_HS>.
+    Found 1-bit register for signal <vga_VS>.
+    Found 1-bit register for signal <inDisplayArea>.
+    Found 10-bit adder for signal <CounterX[9]_GND_3_o_add_1_OUT> created at line 34.
+    Found 10-bit adder for signal <CounterY[9]_GND_3_o_add_6_OUT> created at line 44.
+    Found 10-bit comparator greater for signal <PWR_3_o_CounterX[9]_LessThan_12_o> created at line 49
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_3_o_LessThan_13_o> created at line 49
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_3_o_LessThan_17_o> created at line 58
+    Found 10-bit comparator greater for signal <CounterY[9]_GND_3_o_LessThan_18_o> created at line 58
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <hvsync_generator> synthesized.
+
+Synthesizing Unit <VGA_generator>.
+    Related source file is "D:\DSL\flappybird\VGA_generator.v".
+    Summary:
+	no macro.
+Unit <VGA_generator> synthesized.
+
+Synthesizing Unit <mod_10u_4u>.
+    Related source file is "".
+    Found 14-bit adder for signal <n0333> created at line 0.
+    Found 14-bit adder for signal <GND_8_o_b[3]_add_1_OUT> created at line 0.
+    Found 13-bit adder for signal <n0337> created at line 0.
+    Found 13-bit adder for signal <GND_8_o_b[3]_add_3_OUT> created at line 0.
+    Found 12-bit adder for signal <n0341> created at line 0.
+    Found 12-bit adder for signal <GND_8_o_b[3]_add_5_OUT> created at line 0.
+    Found 11-bit adder for signal <n0345> created at line 0.
+    Found 11-bit adder for signal <GND_8_o_b[3]_add_7_OUT> created at line 0.
+    Found 10-bit adder for signal <n0349> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[3]_add_9_OUT> created at line 0.
+    Found 10-bit adder for signal <n0353> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_8_o_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <n0357> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_8_o_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <n0361> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_8_o_add_15_OUT> created at line 0.
+    Found 10-bit adder for signal <n0365> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_8_o_add_17_OUT> created at line 0.
+    Found 10-bit adder for signal <n0369> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_8_o_add_19_OUT> created at line 0.
+    Found 10-bit adder for signal <n0373> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_8_o_add_21_OUT> created at line 0.
+    Found 14-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  22 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred 101 Multiplexer(s).
+Unit <mod_10u_4u> synthesized.
+
+Synthesizing Unit <div_10u_4u>.
+    Related source file is "".
+    Found 14-bit adder for signal <GND_9_o_b[3]_add_1_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_9_o_b[3]_add_3_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_9_o_b[3]_add_5_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_9_o_b[3]_add_7_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[3]_add_9_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_9_o_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_9_o_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_9_o_add_15_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_9_o_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_9_o_add_19_OUT[9:0]> created at line 0.
+    Found 14-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  10 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <div_10u_4u> synthesized.
+
+Synthesizing Unit <div_10u_7u>.
+    Related source file is "".
+    Found 17-bit adder for signal <GND_10_o_b[6]_add_1_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_10_o_b[6]_add_3_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_10_o_b[6]_add_5_OUT> created at line 0.
+    Found 14-bit adder for signal <GND_10_o_b[6]_add_7_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_10_o_b[6]_add_9_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_10_o_b[6]_add_11_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_10_o_b[6]_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[6]_add_15_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_10_o_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_10_o_add_19_OUT[9:0]> created at line 0.
+    Found 17-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  10 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <div_10u_7u> synthesized.
+
+Synthesizing Unit <X_RAM_NOREAD>.
+    Related source file is "D:\DSL\flappybird\X_RAM.v".
+        PIPE_WIDTH = 61
+        COIN_WIDTH = 20
+        INTERVAL = 142
+        X0_init = 0
+        X1_init = 142
+        X2_init = 284
+        X3_init = 426
+        X4_init = 568
+        X0_init_2 = 61
+        X1_init_2 = 203
+        X2_init_2 = 345
+        X3_init_2 = 487
+        X4_init_2 = 629
+        X0_init_coin = 0
+        X1_init_coin = 142
+        X2_init_coin = 284
+        X3_init_coin = 426
+        X4_init_coin = 568
+        X0_init_coin_2 = 20
+        X1_init_coin_2 = 162
+        X2_init_coin_2 = 304
+        X3_init_coin_2 = 446
+        X4_init_coin_2 = 588
+    Found 3-bit register for signal <state>.
+    Found 50-bit register for signal <n0479[49:0]>.
+    Found 50-bit register for signal <n0480[49:0]>.
+    Found 50-bit register for signal <n0481[49:0]>.
+    Found 50-bit register for signal <n0482[49:0]>.
+    Found 3-bit register for signal <out_pipe>.
+    Found 3-bit register for signal <out_temp_1>.
+    Found 3-bit register for signal <out_temp_2>.
+    Found 3-bit register for signal <out_temp_3>.
+    Found 3-bit register for signal <out_temp_4>.
+    Found 3-bit register for signal <out_coin>.
+    Found 3-bit register for signal <out_coin_1>.
+    Found 3-bit register for signal <out_coin_2>.
+    Found 3-bit register for signal <out_coin_3>.
+    Found 3-bit register for signal <out_coin_4>.
+    Found 1-bit register for signal <shift_Coin>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 001                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit subtractor for signal <array_X_Left[0][9]_GND_11_o_sub_4_OUT> created at line 217.
+    Found 10-bit subtractor for signal <array_X_Right[0][9]_GND_11_o_sub_5_OUT> created at line 218.
+    Found 10-bit subtractor for signal <array_X_Coin_Left[0][9]_GND_11_o_sub_6_OUT> created at line 219.
+    Found 10-bit subtractor for signal <array_X_Coin_Right[0][9]_GND_11_o_sub_7_OUT> created at line 220.
+    Found 10-bit subtractor for signal <array_X_Left[1][9]_GND_11_o_sub_12_OUT> created at line 217.
+    Found 10-bit subtractor for signal <array_X_Right[1][9]_GND_11_o_sub_13_OUT> created at line 218.
+    Found 10-bit subtractor for signal <array_X_Coin_Left[1][9]_GND_11_o_sub_14_OUT> created at line 219.
+    Found 10-bit subtractor for signal <array_X_Coin_Right[1][9]_GND_11_o_sub_15_OUT> created at line 220.
+    Found 10-bit subtractor for signal <array_X_Left[2][9]_GND_11_o_sub_20_OUT> created at line 217.
+    Found 10-bit subtractor for signal <array_X_Right[2][9]_GND_11_o_sub_21_OUT> created at line 218.
+    Found 10-bit subtractor for signal <array_X_Coin_Left[2][9]_GND_11_o_sub_22_OUT> created at line 219.
+    Found 10-bit subtractor for signal <array_X_Coin_Right[2][9]_GND_11_o_sub_23_OUT> created at line 220.
+    Found 10-bit subtractor for signal <array_X_Left[3][9]_GND_11_o_sub_28_OUT> created at line 217.
+    Found 10-bit subtractor for signal <array_X_Right[3][9]_GND_11_o_sub_29_OUT> created at line 218.
+    Found 10-bit subtractor for signal <array_X_Coin_Left[3][9]_GND_11_o_sub_30_OUT> created at line 219.
+    Found 10-bit subtractor for signal <array_X_Coin_Right[3][9]_GND_11_o_sub_31_OUT> created at line 220.
+    Found 10-bit subtractor for signal <array_X_Left[4][9]_GND_11_o_sub_36_OUT> created at line 217.
+    Found 10-bit subtractor for signal <array_X_Right[4][9]_GND_11_o_sub_37_OUT> created at line 218.
+    Found 10-bit subtractor for signal <array_X_Coin_Left[4][9]_GND_11_o_sub_38_OUT> created at line 219.
+    Found 10-bit subtractor for signal <array_X_Coin_Right[4][9]_GND_11_o_sub_39_OUT> created at line 220.
+    Found 3-bit adder for signal <out_pipe[2]_GND_11_o_add_45_OUT> created at line 246.
+    Found 3-bit adder for signal <out_temp_1[2]_GND_11_o_add_48_OUT> created at line 250.
+    Found 3-bit adder for signal <out_temp_2[2]_GND_11_o_add_51_OUT> created at line 254.
+    Found 3-bit adder for signal <out_temp_3[2]_GND_11_o_add_54_OUT> created at line 258.
+    Found 3-bit adder for signal <out_temp_4[2]_GND_11_o_add_57_OUT> created at line 262.
+    Found 3-bit adder for signal <out_coin[2]_GND_11_o_add_67_OUT> created at line 271.
+    Found 3-bit adder for signal <out_coin_1[2]_GND_11_o_add_70_OUT> created at line 275.
+    Found 3-bit adder for signal <out_coin_2[2]_GND_11_o_add_73_OUT> created at line 279.
+    Found 3-bit adder for signal <out_coin_3[2]_GND_11_o_add_76_OUT> created at line 283.
+    Found 3-bit adder for signal <out_coin_4[2]_GND_11_o_add_79_OUT> created at line 287.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_OO_R> created at line 244.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_OO_R> created at line 269.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_OO_L> created at line 312.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_O1_L> created at line 313.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_O2_L> created at line 314.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_O3_L> created at line 315.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_O4_L> created at line 316.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_O1_R> created at line 319.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_O2_R> created at line 320.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_O3_R> created at line 321.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Edge_O4_R> created at line 322.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_OO_L> created at line 324.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_O1_L> created at line 325.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_O2_L> created at line 326.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_O3_L> created at line 327.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_O4_L> created at line 328.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_O1_R> created at line 331.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_O2_R> created at line 332.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_O3_R> created at line 333.
+    Found 10-bit 5-to-1 multiplexer for signal <X_Coin_O4_R> created at line 334.
+    Found 10-bit comparator greater for signal <out_pipe[2]_GND_11_o_LessThan_45_o> created at line 244
+    Found 10-bit comparator greater for signal <out_coin[2]_GND_11_o_LessThan_67_o> created at line 269
+    Summary:
+	inferred  30 Adder/Subtractor(s).
+	inferred 231 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred 340 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <X_RAM_NOREAD> synthesized.
+
+Synthesizing Unit <Y_ROM>.
+    Related source file is "D:\DSL\flappybird\Y_ROM.v".
+        ET0 = 50
+        ET1 = 100
+        ET2 = 150
+        ET3 = 110
+        ET4 = 80
+        EB0 = 350
+        EB1 = 320
+        EB2 = 370
+        EB3 = 350
+        EB4 = 390
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <BtnR> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 9-bit adder for signal <n0147[8:0]> created at line 183.
+    Found 9-bit adder for signal <n0149[8:0]> created at line 191.
+    Found 10-bit adder for signal <n0128> created at line 199.
+    Found 10-bit adder for signal <n0127> created at line 207.
+    Found 9-bit adder for signal <n0155[8:0]> created at line 215.
+    Found 8x100-bit Read Only RAM for signal <_n0187>
+    Found 10-bit 5-to-1 multiplexer for signal <YCoin0> created at line 178.
+    Found 10-bit 5-to-1 multiplexer for signal <YCoin1> created at line 178.
+    Found 10-bit 5-to-1 multiplexer for signal <YCoin2> created at line 178.
+    Found 10-bit 5-to-1 multiplexer for signal <YCoin3> created at line 178.
+    Found 10-bit 5-to-1 multiplexer for signal <YCoin4> created at line 178.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C0<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C4<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C3<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C1<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  50 Latch(s).
+	inferred   5 Multiplexer(s).
+Unit <Y_ROM> synthesized.
+
+Synthesizing Unit <LFSR>.
+    Related source file is "D:\DSL\flappybird\LFSR.v".
+    Found 8-bit register for signal <out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <LFSR> synthesized.
+
+Synthesizing Unit <mod_13u_8u>.
+    Related source file is "".
+    Found 21-bit adder for signal <n0553> created at line 0.
+    Found 21-bit adder for signal <GND_21_o_b[7]_add_1_OUT> created at line 0.
+    Found 20-bit adder for signal <n0557> created at line 0.
+    Found 20-bit adder for signal <GND_21_o_b[7]_add_3_OUT> created at line 0.
+    Found 19-bit adder for signal <n0561> created at line 0.
+    Found 19-bit adder for signal <GND_21_o_b[7]_add_5_OUT> created at line 0.
+    Found 18-bit adder for signal <n0565> created at line 0.
+    Found 18-bit adder for signal <GND_21_o_b[7]_add_7_OUT> created at line 0.
+    Found 17-bit adder for signal <n0569> created at line 0.
+    Found 17-bit adder for signal <GND_21_o_b[7]_add_9_OUT> created at line 0.
+    Found 16-bit adder for signal <n0573> created at line 0.
+    Found 16-bit adder for signal <GND_21_o_b[7]_add_11_OUT> created at line 0.
+    Found 15-bit adder for signal <n0577> created at line 0.
+    Found 15-bit adder for signal <GND_21_o_b[7]_add_13_OUT> created at line 0.
+    Found 14-bit adder for signal <n0581> created at line 0.
+    Found 14-bit adder for signal <GND_21_o_b[7]_add_15_OUT> created at line 0.
+    Found 13-bit adder for signal <n0585> created at line 0.
+    Found 13-bit adder for signal <a[12]_b[7]_add_17_OUT> created at line 0.
+    Found 13-bit adder for signal <n0589> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_21_o_add_19_OUT> created at line 0.
+    Found 13-bit adder for signal <n0593> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_21_o_add_21_OUT> created at line 0.
+    Found 13-bit adder for signal <n0597> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_21_o_add_23_OUT> created at line 0.
+    Found 13-bit adder for signal <n0601> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_21_o_add_25_OUT> created at line 0.
+    Found 13-bit adder for signal <n0605> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_21_o_add_27_OUT> created at line 0.
+    Found 21-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Summary:
+	inferred  28 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
+	inferred 170 Multiplexer(s).
+Unit <mod_13u_8u> synthesized.
+
+Synthesizing Unit <mod_13u_9u>.
+    Related source file is "".
+    Found 22-bit adder for signal <n0571> created at line 0.
+    Found 22-bit adder for signal <GND_22_o_b[8]_add_1_OUT> created at line 0.
+    Found 21-bit adder for signal <n0575> created at line 0.
+    Found 21-bit adder for signal <GND_22_o_b[8]_add_3_OUT> created at line 0.
+    Found 20-bit adder for signal <n0579> created at line 0.
+    Found 20-bit adder for signal <GND_22_o_b[8]_add_5_OUT> created at line 0.
+    Found 19-bit adder for signal <n0583> created at line 0.
+    Found 19-bit adder for signal <GND_22_o_b[8]_add_7_OUT> created at line 0.
+    Found 18-bit adder for signal <n0587> created at line 0.
+    Found 18-bit adder for signal <GND_22_o_b[8]_add_9_OUT> created at line 0.
+    Found 17-bit adder for signal <n0591> created at line 0.
+    Found 17-bit adder for signal <GND_22_o_b[8]_add_11_OUT> created at line 0.
+    Found 16-bit adder for signal <n0595> created at line 0.
+    Found 16-bit adder for signal <GND_22_o_b[8]_add_13_OUT> created at line 0.
+    Found 15-bit adder for signal <n0599> created at line 0.
+    Found 15-bit adder for signal <GND_22_o_b[8]_add_15_OUT> created at line 0.
+    Found 14-bit adder for signal <n0603> created at line 0.
+    Found 14-bit adder for signal <GND_22_o_b[8]_add_17_OUT> created at line 0.
+    Found 13-bit adder for signal <n0607> created at line 0.
+    Found 13-bit adder for signal <a[12]_b[8]_add_19_OUT> created at line 0.
+    Found 13-bit adder for signal <n0611> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_22_o_add_21_OUT> created at line 0.
+    Found 13-bit adder for signal <n0615> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_22_o_add_23_OUT> created at line 0.
+    Found 13-bit adder for signal <n0619> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_22_o_add_25_OUT> created at line 0.
+    Found 13-bit adder for signal <n0623> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_22_o_add_27_OUT> created at line 0.
+    Found 22-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Summary:
+	inferred  28 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
+	inferred 170 Multiplexer(s).
+Unit <mod_13u_9u> synthesized.
+
+Synthesizing Unit <obstacle_logic>.
+    Related source file is "D:\DSL\flappybird\obstacle_logic.v".
+    Found 3-bit register for signal <state>.
+    Found 32-bit register for signal <loseCounter>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 7                                              |
+    | Outputs            | 6                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 001                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <loseCounter[31]_GND_73_o_add_7_OUT> created at line 111.
+    Found 10-bit comparator lessequal for signal <n0002> created at line 102
+    Found 10-bit comparator lessequal for signal <n0004> created at line 102
+    Found 10-bit comparator greater for signal <X_Edge_Left[9]_Bird_X_R[9]_LessThan_5_o> created at line 103
+    Found 10-bit comparator greater for signal <Bird_X_L[9]_X_Edge_Right[9]_LessThan_6_o> created at line 103
+    Found 32-bit comparator greater for signal <n0013> created at line 112
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred   1 Finite State Machine(s).
+Unit <obstacle_logic> synthesized.
+
+Synthesizing Unit <coin_logic>.
+    Related source file is "D:\DSL\flappybird\coin_logic.v".
+        COIN_HEIGHT = 20
+WARNING:Xst:647 - Input <Start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 10-bit register for signal <Score>.
+    Found 2-bit register for signal <get_Zero>.
+    Found 11-bit adder for signal <n0041> created at line 65.
+    Found 10-bit adder for signal <Score[9]_GND_75_o_add_11_OUT> created at line 78.
+    Found 10-bit comparator lessequal for signal <n0000> created at line 65
+    Found 11-bit comparator lessequal for signal <n0003> created at line 65
+    Found 11-bit comparator lessequal for signal <n0006> created at line 65
+    Found 10-bit comparator lessequal for signal <n0008> created at line 65
+    Found 10-bit comparator greater for signal <X_Coin_OO_L[9]_Bird_X_R[9]_LessThan_7_o> created at line 66
+    Found 10-bit comparator greater for signal <Bird_X_L[9]_X_Coin_OO_R[9]_LessThan_8_o> created at line 66
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <coin_logic> synthesized.
+
+Synthesizing Unit <flight_control>.
+    Related source file is "D:\DSL\flappybird\flight_control.v".
+        step = 4
+        MIN_BIRD_Y = 4
+        MAX_BIRD_Y = 639
+    Found 3-bit register for signal <state>.
+    Found 10-bit register for signal <PositiveSpeed>.
+    Found 10-bit register for signal <NegativeSpeed>.
+    Found 10-bit register for signal <Bird_X_L>.
+    Found 10-bit register for signal <Bird_X_R>.
+    Found 10-bit register for signal <Bird_Y_T>.
+    Found 10-bit register for signal <Bird_Y_B>.
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 6                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 001                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit adder for signal <Bird_Y_T[9]_GND_76_o_add_6_OUT> created at line 102.
+    Found 10-bit adder for signal <Bird_Y_B[9]_GND_76_o_add_7_OUT> created at line 103.
+    Found 10-bit subtractor for signal <GND_76_o_GND_76_o_sub_4_OUT<9:0>> created at line 97.
+    Found 10-bit subtractor for signal <GND_76_o_GND_76_o_sub_5_OUT<9:0>> created at line 98.
+    Found 10-bit comparator greater for signal <GND_76_o_Bird_Y_T[9]_LessThan_3_o> created at line 95
+    Found 10-bit comparator greater for signal <Bird_Y_B[9]_PWR_69_o_LessThan_6_o> created at line 100
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  60 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <flight_control> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 8x100-bit single-port Read Only RAM                   : 1
+# Adders/Subtractors                                   : 251
+ 10-bit adder                                          : 56
+ 10-bit addsub                                         : 2
+ 10-bit subtractor                                     : 20
+ 11-bit adder                                          : 14
+ 12-bit adder                                          : 8
+ 13-bit adder                                          : 52
+ 14-bit adder                                          : 16
+ 15-bit adder                                          : 9
+ 16-bit adder                                          : 9
+ 17-bit adder                                          : 9
+ 18-bit adder                                          : 8
+ 19-bit adder                                          : 8
+ 20-bit adder                                          : 8
+ 21-bit adder                                          : 8
+ 22-bit adder                                          : 4
+ 28-bit adder                                          : 1
+ 3-bit adder                                           : 10
+ 32-bit adder                                          : 1
+ 5-bit subtractor                                      : 2
+ 9-bit adder                                           : 6
+# Registers                                            : 35
+ 1-bit register                                        : 7
+ 10-bit register                                       : 9
+ 2-bit register                                        : 1
+ 28-bit register                                       : 1
+ 3-bit register                                        : 10
+ 32-bit register                                       : 1
+ 5-bit register                                        : 1
+ 50-bit register                                       : 4
+ 8-bit register                                        : 1
+# Latches                                              : 50
+ 1-bit latch                                           : 50
+# Comparators                                          : 170
+ 10-bit comparator greater                             : 12
+ 10-bit comparator lessequal                           : 71
+ 11-bit comparator lessequal                           : 12
+ 12-bit comparator lessequal                           : 5
+ 13-bit comparator lessequal                           : 27
+ 14-bit comparator lessequal                           : 9
+ 15-bit comparator lessequal                           : 5
+ 16-bit comparator lessequal                           : 5
+ 17-bit comparator lessequal                           : 5
+ 18-bit comparator lessequal                           : 4
+ 19-bit comparator lessequal                           : 4
+ 20-bit comparator lessequal                           : 4
+ 21-bit comparator lessequal                           : 4
+ 22-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 1489
+ 1-bit 2-to-1 multiplexer                              : 1417
+ 1-bit 4-to-1 multiplexer                              : 4
+ 10-bit 2-to-1 multiplexer                             : 14
+ 10-bit 5-to-1 multiplexer                             : 25
+ 3-bit 2-to-1 multiplexer                              : 20
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+ 9-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/sprites.ngc>.
+Reading core <ipcore_dir/pipe.ngc>.
+Reading core <ipcore_dir/coin.ngc>.
+Loading core <sprites> for timing and area information for instance <sprite>.
+Loading core <pipe> for timing and area information for instance <pipes>.
+Loading core <coin> for timing and area information for instance <coins>.
+WARNING:Xst:1293 - FF/Latch <C2_9> has a constant value of 0 in block <y_rom>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <C3_9> has a constant value of 0 in block <y_rom>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <C1_9> has a constant value of 0 in block <y_rom>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <get_Zero_1> has a constant value of 0 in block <coin_log>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_9> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_8> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_7> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_6> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_5> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_4> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_3> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_2> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_1> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_R_0> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_9> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_8> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_7> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_6> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_5> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_4> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_3> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_2> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_1> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Bird_X_L_0> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Y_ROM>.
+INFO:Xst:3231 - The small RAM <Mram__n0187> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 100-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <I>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Y_ROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <coin_logic>.
+The following registers are absorbed into counter <Score>: 1 register on signal <Score>.
+Unit <coin_logic> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hvsync_generator>.
+The following registers are absorbed into counter <CounterX>: 1 register on signal <CounterX>.
+The following registers are absorbed into counter <CounterY>: 1 register on signal <CounterY>.
+Unit <hvsync_generator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <obstacle_logic>.
+The following registers are absorbed into counter <loseCounter>: 1 register on signal <loseCounter>.
+Unit <obstacle_logic> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_top>.
+The following registers are absorbed into counter <DIV_CLK>: 1 register on signal <DIV_CLK>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SSD_CATHODES> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <SSD>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Cg>            |          |
+    -----------------------------------------------------------------------
+Unit <vga_top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 8x100-bit single-port distributed Read Only RAM       : 1
+# Adders/Subtractors                                   : 156
+ 1-bit adder                                           : 1
+ 1-bit adder carry in                                  : 1
+ 1-bit subtractor                                      : 1
+ 10-bit adder                                          : 22
+ 10-bit adder carry in                                 : 30
+ 10-bit addsub                                         : 2
+ 10-bit subtractor                                     : 20
+ 11-bit adder                                          : 6
+ 13-bit adder carry in                                 : 52
+ 3-bit adder                                           : 10
+ 4-bit adder carry in                                  : 3
+ 5-bit subtractor                                      : 1
+ 8-bit adder carry in                                  : 2
+ 9-bit adder                                           : 3
+ 9-bit adder carry in                                  : 2
+# Counters                                             : 5
+ 10-bit up counter                                     : 3
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 312
+ Flip-Flops                                            : 312
+# Comparators                                          : 170
+ 10-bit comparator greater                             : 12
+ 10-bit comparator lessequal                           : 71
+ 11-bit comparator lessequal                           : 12
+ 12-bit comparator lessequal                           : 5
+ 13-bit comparator lessequal                           : 27
+ 14-bit comparator lessequal                           : 9
+ 15-bit comparator lessequal                           : 5
+ 16-bit comparator lessequal                           : 5
+ 17-bit comparator lessequal                           : 5
+ 18-bit comparator lessequal                           : 4
+ 19-bit comparator lessequal                           : 4
+ 20-bit comparator lessequal                           : 4
+ 21-bit comparator lessequal                           : 4
+ 22-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 1487
+ 1-bit 2-to-1 multiplexer                              : 1417
+ 1-bit 4-to-1 multiplexer                              : 4
+ 10-bit 2-to-1 multiplexer                             : 12
+ 10-bit 5-to-1 multiplexer                             : 25
+ 3-bit 2-to-1 multiplexer                              : 20
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+ 9-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <NegativeSpeed_0> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NegativeSpeed_1> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NegativeSpeed_2> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NegativeSpeed_3> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NegativeSpeed_4> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NegativeSpeed_5> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NegativeSpeed_6> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NegativeSpeed_7> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NegativeSpeed_8> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NegativeSpeed_9> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_0> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_1> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_2> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_3> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_4> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_5> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_6> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_7> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_8> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_R_9> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_0> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_1> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_2> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_3> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_4> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_5> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_6> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_7> (without init value) has a constant value of 1 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_8> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bird_X_L_9> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_0> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_1> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_2> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_3> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_4> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_5> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_6> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_7> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_8> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PositiveSpeed_9> (without init value) has a constant value of 0 in block <flight_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <get_Zero_1> has a constant value of 0 in block <coin_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <C1_9> has a constant value of 0 in block <Y_ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <C3_9> has a constant value of 0 in block <Y_ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <C2_9> has a constant value of 0 in block <Y_ROM>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <flight_control/FSM_2> on signal <state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 001   | 00
+ 010   | 01
+ 100   | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <x_ram/FSM_0> on signal <state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 001   | 00
+ 010   | 01
+ 100   | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <obs_log/FSM_1> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 001   | 00
+ 010   | 01
+ 100   | 11
+-------------------
+WARNING:Xst:1293 - FF/Latch <C0_9> has a constant value of 0 in block <Y_ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <C4_9> has a constant value of 0 in block <Y_ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <DIV_CLK_23> of sequential type is unconnected in block <vga_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_24> of sequential type is unconnected in block <vga_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_25> of sequential type is unconnected in block <vga_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_26> of sequential type is unconnected in block <vga_top>.
+WARNING:Xst:2677 - Node <DIV_CLK_27> of sequential type is unconnected in block <vga_top>.
+
+Optimizing unit <vga_top> ...
+
+Optimizing unit <flight_control> ...
+
+Optimizing unit <X_RAM_NOREAD> ...
+
+Optimizing unit <hvsync_generator> ...
+
+Optimizing unit <obstacle_logic> ...
+
+Optimizing unit <coin_logic> ...
+
+Optimizing unit <Y_ROM> ...
+
+Optimizing unit <LFSR> ...
+
+Optimizing unit <mod_10u_4u> ...
+INFO:Xst:2261 - The FF/Latch <x_ram/array_X_Right_0_40> in Unit <vga_top> is equivalent to the following 4 FFs/Latches, which will be removed : <x_ram/array_X_Right_0_30> <x_ram/array_X_Right_0_20> <x_ram/array_X_Right_0_10> <x_ram/array_X_Right_0_0> 
+INFO:Xst:2261 - The FF/Latch <x_ram/array_X_Coin_Right_0_40> in Unit <vga_top> is equivalent to the following 4 FFs/Latches, which will be removed : <x_ram/array_X_Coin_Right_0_30> <x_ram/array_X_Coin_Right_0_20> <x_ram/array_X_Coin_Right_0_10> <x_ram/array_X_Coin_Right_0_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block vga_top, actual ratio is 26.
+FlipFlop flight_control/state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop syncgen/CounterX_0 has been replicated 1 time(s)
+FlipFlop syncgen/CounterX_1 has been replicated 1 time(s)
+FlipFlop syncgen/CounterX_2 has been replicated 1 time(s)
+FlipFlop syncgen/CounterX_6 has been replicated 1 time(s)
+FlipFlop syncgen/CounterX_7 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_1 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_2 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_4 has been replicated 1 time(s)
+FlipFlop x_ram/out_coin_0 has been replicated 1 time(s)
+FlipFlop x_ram/out_coin_11 has been replicated 1 time(s)
+FlipFlop x_ram/out_coin_2 has been replicated 1 time(s)
+FlipFlop x_ram/out_pipe_0 has been replicated 1 time(s)
+FlipFlop x_ram/out_pipe_1 has been replicated 1 time(s)
+FlipFlop x_ram/out_pipe_2 has been replicated 1 time(s)
+FlipFlop RGB_in_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RGB_in_1 has been replicated 3 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 373
+ Flip-Flops                                            : 373
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : vga_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2503
+#      BUF                         : 1
+#      GND                         : 4
+#      INV                         : 14
+#      LUT1                        : 67
+#      LUT2                        : 104
+#      LUT3                        : 379
+#      LUT4                        : 467
+#      LUT5                        : 298
+#      LUT6                        : 711
+#      MUXCY                       : 331
+#      MUXF7                       : 4
+#      VCC                         : 4
+#      XORCY                       : 119
+# FlipFlops/Latches                : 427
+#      FD                          : 36
+#      FDC                         : 45
+#      FDCE                        : 23
+#      FDE                         : 259
+#      FDR                         : 9
+#      FDRE                        : 10
+#      LD                          : 45
+# RAMS                             : 52
+#      RAMB16BWER                  : 36
+#      RAMB8BWER                   : 16
+# Shift Registers                  : 9
+#      SRLC16E                     : 9
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 40
+#      IBUF                        : 5
+#      OBUF                        : 35
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             421  out of  18224     2%  
+ Number of Slice LUTs:                 2049  out of   9112    22%  
+    Number used as Logic:              2040  out of   9112    22%  
+    Number used as Memory:                9  out of   2176     0%  
+       Number used as SRL:                9
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2064
+   Number with an unused Flip Flop:    1643  out of   2064    79%  
+   Number with an unused LUT:            15  out of   2064     0%  
+   Number of fully used LUT-FF pairs:   406  out of   2064    19%  
+   Number of unique control sets:        26
+
+IO Utilization: 
+ Number of IOs:                          49
+ Number of bonded IOBs:                  41  out of    232    17%  
+    IOB Flip Flops/Latches:               6
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               44  out of     32   137% (*) 
+    Number using Block RAM only:         44
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)                                                                                                           | Load  |
+-------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
+ClkPort                                    | BUFGP                                                                                                                           | 29    |
+DIV_CLK_19                                 | BUFG                                                                                                                            | 236   |
+DIV_CLK_22                                 | NONE(Flash_Blue)                                                                                                                | 1     |
+DIV_CLK_20                                 | BUFG                                                                                                                            | 23    |
+DIV_CLK_1                                  | BUFG                                                                                                                            | 76    |
+y_rom/Mmux_YCoin233(y_rom/Mmux_YCoin2331:O)| NONE(*)(y_rom/C2_0)                                                                                                             | 9     |
+y_rom/Mmux_YCoin111(y_rom/Mmux_YCoin2341:O)| NONE(*)(y_rom/C3_0)                                                                                                             | 9     |
+y_rom/Mmux_YCoin232(y_rom/Mmux_YCoin2321:O)| NONE(*)(y_rom/C4_0)                                                                                                             | 9     |
+y_rom/Mmux_YCoin231(y_rom/Mmux_YCoin2311:O)| NONE(*)(y_rom/C0_1)                                                                                                             | 9     |
+y_rom/_n0213(y_rom/_n0213<2>1:O)           | NONE(*)(y_rom/C1_0)                                                                                                             | 9     |
+x_ram/out_coin_0                           | NONE(y_rom/lfsr/out_7)                                                                                                          | 8     |
+sprite/N1                                  | NONE(sprite/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram) | 1     |
+DIV_CLK_0                                  | NONE(sprite/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram) | 70    |
+pipes/N1                                   | NONE(pipes/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram) | 31    |
+coins/N1                                   | NONE(coins/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 20    |
+-------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.414ns (Maximum Frequency: 184.703MHz)
+   Minimum input arrival time before clock: 5.707ns
+   Maximum output required time after clock: 18.936ns
+   Maximum combinational path delay: 5.643ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DIV_CLK_19'
+  Clock period: 5.414ns (frequency: 184.703MHz)
+  Total number of paths / destination ports: 8700 / 237
+-------------------------------------------------------------------------
+Delay:               5.414ns (Levels of Logic = 4)
+  Source:            x_ram/array_X_Coin_Right_0_8 (FF)
+  Destination:       x_ram/out_coin_4_0 (FF)
+  Source Clock:      DIV_CLK_19 rising
+  Destination Clock: DIV_CLK_19 rising
+
+  Data Path: x_ram/array_X_Coin_Right_0_8 to x_ram/out_coin_4_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.447   1.167  x_ram/array_X_Coin_Right_0_8 (x_ram/array_X_Coin_Right_0_8)
+     LUT6:I0->O            7   0.203   0.774  x_ram/Mmux_X_Coin_OO_R91 (x_ram/Mmux_X_Coin_OO_R9)
+     LUT3:I2->O           18   0.205   1.394  x_ram/Mmux_X_Coin_OO_R92 (X_Coin_OO_R<8>)
+     LUT5:I0->O            5   0.203   0.715  x_ram/out_coin[2]_GND_11_o_LessThan_67_o1_SW6 (N284)
+     LUT6:I5->O            1   0.205   0.000  x_ram/state[2]_GND_11_o_select_107_OUT<0>1 (x_ram/state[2]_GND_11_o_select_107_OUT<0>)
+     FDE:D                     0.102          x_ram/out_coin_4_0
+    ----------------------------------------
+    Total                      5.414ns (1.365ns logic, 4.049ns route)
+                                       (25.2% logic, 74.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DIV_CLK_22'
+  Clock period: 1.950ns (frequency: 512.794MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.950ns (Levels of Logic = 1)
+  Source:            Flash_Blue (FF)
+  Destination:       Flash_Blue (FF)
+  Source Clock:      DIV_CLK_22 rising
+  Destination Clock: DIV_CLK_22 rising
+
+  Data Path: Flash_Blue to Flash_Blue
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  Flash_Blue (Flash_Blue)
+     INV:I->O              1   0.206   0.579  Flash_Blue_INV_15_o1_INV_0 (Flash_Blue_INV_15_o)
+     FDR:D                     0.102          Flash_Blue
+    ----------------------------------------
+    Total                      1.950ns (0.755ns logic, 1.195ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ClkPort'
+  Clock period: 2.577ns (frequency: 388.048MHz)
+  Total number of paths / destination ports: 276 / 23
+-------------------------------------------------------------------------
+Delay:               2.577ns (Levels of Logic = 24)
+  Source:            DIV_CLK_0 (FF)
+  Destination:       DIV_CLK_22 (FF)
+  Source Clock:      ClkPort rising
+  Destination Clock: ClkPort rising
+
+  Data Path: DIV_CLK_0 to DIV_CLK_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             19   0.447   1.071  DIV_CLK_0 (DIV_CLK_0)
+     INV:I->O              1   0.206   0.000  Mcount_DIV_CLK_lut<0>_INV_0 (Mcount_DIV_CLK_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcount_DIV_CLK_cy<0> (Mcount_DIV_CLK_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<1> (Mcount_DIV_CLK_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<2> (Mcount_DIV_CLK_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<3> (Mcount_DIV_CLK_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<4> (Mcount_DIV_CLK_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<5> (Mcount_DIV_CLK_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<6> (Mcount_DIV_CLK_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<7> (Mcount_DIV_CLK_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<8> (Mcount_DIV_CLK_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<9> (Mcount_DIV_CLK_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<10> (Mcount_DIV_CLK_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<11> (Mcount_DIV_CLK_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<12> (Mcount_DIV_CLK_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<13> (Mcount_DIV_CLK_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<14> (Mcount_DIV_CLK_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<15> (Mcount_DIV_CLK_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<16> (Mcount_DIV_CLK_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<17> (Mcount_DIV_CLK_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<18> (Mcount_DIV_CLK_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<19> (Mcount_DIV_CLK_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_DIV_CLK_cy<20> (Mcount_DIV_CLK_cy<20>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_DIV_CLK_cy<21> (Mcount_DIV_CLK_cy<21>)
+     XORCY:CI->O           1   0.180   0.000  Mcount_DIV_CLK_xor<22> (Result<22>)
+     FDC:D                     0.102          DIV_CLK_22
+    ----------------------------------------
+    Total                      2.577ns (1.506ns logic, 1.071ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DIV_CLK_20'
+  Clock period: 5.147ns (frequency: 194.278MHz)
+  Total number of paths / destination ports: 1179 / 23
+-------------------------------------------------------------------------
+Delay:               5.147ns (Levels of Logic = 5)
+  Source:            flight_control/Bird_Y_T_8 (FF)
+  Destination:       flight_control/Bird_Y_T_4 (FF)
+  Source Clock:      DIV_CLK_20 rising
+  Destination Clock: DIV_CLK_20 rising
+
+  Data Path: flight_control/Bird_Y_T_8 to flight_control/Bird_Y_T_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.447   1.147  flight_control/Bird_Y_T_8 (flight_control/Bird_Y_T_8)
+     LUT6:I1->O           11   0.203   0.883  flight_control/BtnU_GND_76_o_AND_62_o_SW0 (N11)
+     LUT6:I5->O            8   0.205   0.803  flight_control/state[2]_GND_76_o_select_26_OUT<2>111 (flight_control/state[2]_GND_76_o_select_25_OUT<2>11)
+     LUT6:I5->O            1   0.205   0.808  flight_control/state[2]_GND_76_o_select_25_OUT<4>31_SW5_F (N710)
+     LUT6:I3->O            1   0.205   0.000  flight_control/state[2]_GND_76_o_select_25_OUT<4>1_G (N721)
+     MUXF7:I1->O           1   0.140   0.000  flight_control/state[2]_GND_76_o_select_25_OUT<4>1 (flight_control/state[2]_GND_76_o_select_25_OUT<4>)
+     FDE:D                     0.102          flight_control/Bird_Y_T_4
+    ----------------------------------------
+    Total                      5.147ns (1.507ns logic, 3.640ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DIV_CLK_1'
+  Clock period: 5.285ns (frequency: 189.200MHz)
+  Total number of paths / destination ports: 4209 / 120
+-------------------------------------------------------------------------
+Delay:               5.285ns (Levels of Logic = 3)
+  Source:            syncgen/CounterY_8 (FF)
+  Destination:       syncgen/CounterY_9 (FF)
+  Source Clock:      DIV_CLK_1 rising
+  Destination Clock: DIV_CLK_1 rising
+
+  Data Path: syncgen/CounterY_8 to syncgen/CounterY_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            24   0.447   1.517  syncgen/CounterY_8 (syncgen/CounterY_8)
+     LUT5:I0->O            8   0.203   0.803  syncgen/CounterY[9]_PWR_3_o_equal_5_o<9>_SW0 (N209)
+     LUT6:I5->O            3   0.205   0.651  syncgen/CounterY[9]_PWR_3_o_equal_5_o<9> (syncgen/CounterY[9]_PWR_3_o_equal_5_o)
+     LUT2:I1->O           13   0.205   0.932  syncgen/_n0047_inv1 (syncgen/_n0047_inv)
+     FDCE:CE                   0.322          syncgen/CounterY_0
+    ----------------------------------------
+    Total                      5.285ns (1.382ns logic, 3.903ns route)
+                                       (26.1% logic, 73.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'x_ram/out_coin_0'
+  Clock period: 2.077ns (frequency: 481.435MHz)
+  Total number of paths / destination ports: 9 / 8
+-------------------------------------------------------------------------
+Delay:               2.077ns (Levels of Logic = 1)
+  Source:            y_rom/lfsr/out_3 (FF)
+  Destination:       y_rom/lfsr/out_0 (FF)
+  Source Clock:      x_ram/out_coin_0 rising
+  Destination Clock: x_ram/out_coin_0 rising
+
+  Data Path: y_rom/lfsr/out_3 to y_rom/lfsr/out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              27   0.447   1.325  y_rom/lfsr/out_3 (y_rom/lfsr/out_3)
+     LUT2:I0->O            1   0.203   0.000  y_rom/lfsr/linear_feedback1 (y_rom/lfsr/linear_feedback)
+     FD:D                      0.102          y_rom/lfsr/out_0
+    ----------------------------------------
+    Total                      2.077ns (0.752ns logic, 1.325ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DIV_CLK_0'
+  Clock period: 1.415ns (frequency: 706.714MHz)
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Delay:               1.415ns (Levels of Logic = 0)
+  Source:            pipes/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mshreg_sel_pipe_d1_3 (FF)
+  Destination:       pipes/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_d1_3 (FF)
+  Source Clock:      DIV_CLK_0 rising
+  Destination Clock: DIV_CLK_0 rising
+
+  Data Path: pipes/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mshreg_sel_pipe_d1_3 to pipes/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_d1_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRLC16E:CLK->Q        1   1.313   0.000  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mshreg_sel_pipe_d1_3 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mshreg_sel_pipe_d1_3)
+     FDE:D                     0.102          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_d1_3
+    ----------------------------------------
+    Total                      1.415ns (1.415ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkPort'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              3.502ns (Levels of Logic = 1)
+  Source:            BtnR (PAD)
+  Destination:       DIV_CLK_0 (FF)
+  Destination Clock: ClkPort rising
+
+  Data Path: BtnR to DIV_CLK_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            96   1.222   1.850  BtnR_IBUF (Ld3_OBUF)
+     FDC:CLR                   0.430          DIV_CLK_0
+    ----------------------------------------
+    Total                      3.502ns (1.652ns logic, 1.850ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_20'
+  Total number of paths / destination ports: 123 / 42
+-------------------------------------------------------------------------
+Offset:              5.707ns (Levels of Logic = 5)
+  Source:            BtnU (PAD)
+  Destination:       flight_control/Bird_Y_B_4 (FF)
+  Destination Clock: DIV_CLK_20 rising
+
+  Data Path: BtnU to flight_control/Bird_Y_B_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.222   1.394  BtnU_IBUF (Ld2_OBUF)
+     LUT5:I0->O            1   0.203   0.684  flight_control/state[2]_GND_76_o_select_26_OUT<4>21_SW4_SW1 (N426)
+     LUT6:I4->O            1   0.203   0.808  flight_control/state[2]_GND_76_o_select_26_OUT<4>21_SW4 (N374)
+     LUT4:I1->O            1   0.205   0.684  flight_control/state[2]_GND_76_o_select_26_OUT<4>1_SW2 (N635)
+     LUT6:I4->O            1   0.203   0.000  flight_control/state[2]_GND_76_o_select_26_OUT<4>1 (flight_control/state[2]_GND_76_o_select_26_OUT<4>)
+     FDE:D                     0.102          flight_control/Bird_Y_B_4
+    ----------------------------------------
+    Total                      5.707ns (2.138ns logic, 3.569ns route)
+                                       (37.5% logic, 62.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_19'
+  Total number of paths / destination ports: 233 / 233
+-------------------------------------------------------------------------
+Offset:              5.666ns (Levels of Logic = 2)
+  Source:            BtnR (PAD)
+  Destination:       x_ram/out_coin_4_2 (FF)
+  Destination Clock: DIV_CLK_19 rising
+
+  Data Path: BtnR to x_ram/out_coin_4_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            96   1.222   1.850  BtnR_IBUF (Ld3_OBUF)
+     INV:I->O            249   0.206   2.065  flight_control/reset_inv1_INV_0 (coin_log/reset_inv)
+     FDE:CE                    0.322          x_ram/array_X_Left_0_0
+    ----------------------------------------
+    Total                      5.666ns (1.750ns logic, 3.916ns route)
+                                       (30.9% logic, 69.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_CLK_1'
+  Total number of paths / destination ports: 118 / 86
+-------------------------------------------------------------------------
+Offset:              5.666ns (Levels of Logic = 2)
+  Source:            BtnR (PAD)
+  Destination:       coin_log/get_Zero_0 (FF)
+  Destination Clock: DIV_CLK_1 rising
+
+  Data Path: BtnR to coin_log/get_Zero_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            96   1.222   1.850  BtnR_IBUF (Ld3_OBUF)
+     INV:I->O            249   0.206   2.065  flight_control/reset_inv1_INV_0 (coin_log/reset_inv)
+     FDE:CE                    0.322          coin_log/get_Zero_0
+    ----------------------------------------
+    Total                      5.666ns (1.750ns logic, 3.916ns route)
+                                       (30.9% logic, 69.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkPort'
+  Total number of paths / destination ports: 91 / 17
+-------------------------------------------------------------------------
+Offset:              7.056ns (Levels of Logic = 4)
+  Source:            DIV_CLK_19 (FF)
+  Destination:       Cf (PAD)
+  Source Clock:      ClkPort rising
+
+  Data Path: DIV_CLK_19 to Cf
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.447   1.247  DIV_CLK_19 (DIV_CLK_19)
+     LUT6:I0->O            1   0.203   0.580  Mmux_SSD<3>12 (Mmux_SSD<3>11)
+     LUT6:I5->O            7   0.205   1.021  Mmux_SSD<3>13 (SSD<3>)
+     LUT4:I0->O            1   0.203   0.579  Mram_SSD_CATHODES111 (Cf_OBUF)
+     OBUF:I->O                 2.571          Cf_OBUF (Cf)
+    ----------------------------------------
+    Total                      7.056ns (3.629ns logic, 3.427ns route)
+                                       (51.4% logic, 48.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_CLK_1'
+  Total number of paths / destination ports: 1619816 / 9
+-------------------------------------------------------------------------
+Offset:              18.936ns (Levels of Logic = 14)
+  Source:            coin_log/Score_8 (FF)
+  Destination:       Ca (PAD)
+  Source Clock:      DIV_CLK_1 rising
+
+  Data Path: coin_log/Score_8 to Ca
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            27   0.447   1.449  coin_log/Score_8 (coin_log/Score_8)
+     LUT4:I1->O            5   0.205   1.059  Score[9]_PWR_1_o_mod_73/Mmux_a[6]_a[9]_MUX_142_o11 (Score[9]_PWR_1_o_mod_73/a[6]_a[9]_MUX_142_o)
+     LUT5:I0->O           13   0.203   1.297  Score[9]_PWR_1_o_mod_73/Mmux_a[6]_a[9]_MUX_152_o11 (Score[9]_PWR_1_o_mod_73/Madd_a[9]_GND_8_o_add_15_OUT_Madd_lut<6>)
+     LUT6:I0->O            7   0.203   0.878  Score[9]_PWR_1_o_mod_73/BUS_0008_INV_103_o11 (Score[9]_PWR_1_o_mod_73/BUS_0008_INV_103_o)
+     LUT3:I1->O            1   0.203   0.924  Score[9]_PWR_1_o_mod_73/Mmux_a[6]_a[9]_MUX_162_o11 (Score[9]_PWR_1_o_mod_73/a[6]_a[9]_MUX_162_o)
+     LUT6:I1->O           19   0.203   1.300  Score[9]_PWR_1_o_mod_73/BUS_0009_INV_114_o1 (Score[9]_PWR_1_o_mod_73/BUS_0009_INV_114_o)
+     LUT3:I0->O            1   0.205   0.827  Score[9]_PWR_1_o_mod_73/Mmux_a[0]_a[9]_MUX_178_o121 (Score[9]_PWR_1_o_mod_73/Madd_a[9]_GND_8_o_add_19_OUT_Madd_lut<2>)
+     LUT6:I2->O            1   0.203   0.580  Score[9]_PWR_1_o_mod_73/BUS_0010_INV_125_o1_SW0 (N219)
+     LUT6:I5->O            4   0.205   1.028  Score[9]_PWR_1_o_mod_73/BUS_0010_INV_125_o1 (Score[9]_PWR_1_o_mod_73/BUS_0010_INV_125_o)
+     LUT5:I0->O            3   0.203   0.995  Score[9]_PWR_1_o_mod_73/Mmux_a[0]_a[9]_MUX_188_o121 (Score[9]_PWR_1_o_mod_73/a[2]_a[9]_MUX_186_o)
+     LUT6:I1->O            3   0.203   0.755  Score[9]_PWR_1_o_mod_73/BUS_0011_INV_136_o23 (Score[9]_PWR_1_o_mod_73/BUS_0011_INV_136_o)
+     LUT5:I3->O            1   0.203   0.580  Mmux_SSD<2>12 (Mmux_SSD<2>11)
+     LUT6:I5->O            7   0.205   1.021  Mmux_SSD<2>13 (SSD<2>)
+     LUT4:I0->O            1   0.203   0.579  Mram_SSD_CATHODES51 (Cb_OBUF)
+     OBUF:I->O                 2.571          Cb_OBUF (Cb)
+    ----------------------------------------
+    Total                     18.936ns (5.665ns logic, 13.271ns route)
+                                       (29.9% logic, 70.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               5.643ns (Levels of Logic = 2)
+  Source:            BtnR (PAD)
+  Destination:       Ld3 (PAD)
+
+  Data Path: BtnR to Ld3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            96   1.222   1.850  BtnR_IBUF (Ld3_OBUF)
+     OBUF:I->O                 2.571          Ld3_OBUF (Ld3)
+    ----------------------------------------
+    Total                      5.643ns (3.793ns logic, 1.850ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ClkPort
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+ClkPort            |    2.577|         |         |         |
+DIV_CLK_1          |   11.302|         |         |         |
+DIV_CLK_19         |   15.675|         |         |         |
+DIV_CLK_22         |    2.484|         |         |         |
+x_ram/out_coin_0   |   17.237|         |         |         |
+y_rom/Mmux_YCoin111|         |   13.247|         |         |
+y_rom/Mmux_YCoin231|         |   13.349|         |         |
+y_rom/Mmux_YCoin232|         |   13.492|         |         |
+y_rom/Mmux_YCoin233|         |   12.328|         |         |
+y_rom/_n0213       |         |   13.403|         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DIV_CLK_0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_CLK_0      |    1.415|         |         |         |
+DIV_CLK_1      |    4.296|         |         |         |
+DIV_CLK_20     |    3.494|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DIV_CLK_1
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+DIV_CLK_1          |    5.285|         |         |         |
+DIV_CLK_19         |   11.576|         |         |         |
+DIV_CLK_20         |    6.277|         |         |         |
+y_rom/Mmux_YCoin111|         |   10.520|         |         |
+y_rom/Mmux_YCoin231|         |   10.292|         |         |
+y_rom/Mmux_YCoin232|         |    9.330|         |         |
+y_rom/Mmux_YCoin233|         |   10.394|         |         |
+y_rom/_n0213       |         |   10.467|         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DIV_CLK_19
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_CLK_1      |    2.649|         |         |         |
+DIV_CLK_19     |    5.414|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DIV_CLK_20
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_CLK_1      |    5.569|         |         |         |
+DIV_CLK_20     |    5.147|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DIV_CLK_22
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_CLK_1      |    3.328|         |         |         |
+DIV_CLK_22     |    1.950|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock x_ram/out_coin_0
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+x_ram/out_coin_0|    2.077|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock y_rom/Mmux_YCoin111
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+x_ram/out_coin_0|         |         |    3.321|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock y_rom/Mmux_YCoin231
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+x_ram/out_coin_0|         |         |    2.441|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock y_rom/Mmux_YCoin232
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+x_ram/out_coin_0|         |         |    3.074|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock y_rom/Mmux_YCoin233
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+x_ram/out_coin_0|         |         |    3.371|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock y_rom/_n0213
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+x_ram/out_coin_0|         |         |    4.471|         |
+----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.69 secs
+ 
+--> 
+
+Total memory usage is 197220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  213 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

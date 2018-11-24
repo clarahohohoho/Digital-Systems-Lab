@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+nyancat_rom instance_name (
+    .clk(clk), 
+    .row(row), 
+    .col(col), 
+    .color_data(color_data)
+    );
+
+
